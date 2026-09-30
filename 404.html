@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>加载中…</title>
 <style>
-html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #fff; }#wrap{ position: fixed; inset: 0; width: 100%; height: 100%; border: 0; display: block; z-index: 2147483647; }#loading { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; font: 14px/1.5 -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif; color: #888; background: #fff; z-index: 2147483646; transition: opacity .25s ease; }#loading.hide { opacity: 0; pointer-events: none; }
+html, body { background: #FFEEDD; margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #fff; }#wrap{ position: fixed; inset: 0; width: 100%; height: 100%; border: 0; display: block; z-index: 2147483647; }#loading { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; font: 14px/1.5 -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif; color: #888; background: #fff; z-index: 2147483646; transition: opacity .25s ease; }#loading.hide { opacity: 0; pointer-events: none; }@media (prefers-color-scheme: dark) { body { background : #221100; } }
 </style>
 </head>
 <body>
-<div id="loading">加载中…</div>
+<div id="loading"></div>
 <script>
 (function(){var e=new URL(location.href),t="https://utw.pages.dev"+e.pathname+e.search+e.hash,n=document.createElement("iframe");n.id="wrap",n.src=t,n.title="内容",n.setAttribute("allowfullscreen",""),n.setAttribute("allow","fullscreen; clipboard-read; clipboard-write; autoplay; encrypted-media; picture-in-picture"),n.setAttribute("referrerpolicy","no-referrer-when-downgrade");var o=document.getElementById("loading");n.addEventListener("load",function(){o.classList.add("hide");try{document.title=n.contentDocument.title||"内容"}catch(e){}}),n.addEventListener("error",function(){o.textContent="加载失败："+t}),document.body.appendChild(n)})();
 </script>
